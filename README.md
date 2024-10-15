@@ -200,12 +200,44 @@ Code:
   ![](images/chart4.png)  
 
  LONGEVITY 
-
+   
    Lastly let's attempt to get a sense of whether players who come into the NBA today are staying longer, or exiting quicker than those of  
    
   the 70s to 90s era. To do this however, we must omit players who are still playing, as they do not have a year_end date
- 
- 
+
+ Code:
+
+    import pandas as pd
+    import numpy as np
+    import matplotlib.pyplot as plt
+    import seaborn as sns
+    
+    # Load the dataset
+    players = pd.read_csv('/content/player_data.csv')
+    
+    # Calculate career length
+    players['career_length'] = players['year_end'] - players['year_start']
+    plt.title('The average career length of NBA players')
+    older = players[np.logical_and(players['year_start'] >= 1970, players['year_start'] <= 1990)]
+    older['career_length'] = older['year_end'] - older['year_start']
+    older.head()
+    print('The average career length of players who entered the NBA between 1970 and 1990 is', np.round(older['career_length'].mean(),2), 
+     'years')
+    print('The median career length of players who entered the NBA between 1970 and 1990 is', np.round(older['career_length'].median(),2), 
+     'years')
+    modern = players[np.logical_and.reduce((players['year_start'] >= 1995, players['year_end'] <= 2018,players['year_start'] <= 2005))]
+    modern['career_length'] = modern['year_end'] - modern['year_start']
+    modern.head()
+    print('The average career length of players who entered the NBA between 1995 and 2005 is', 
+    np.round(modern['career_length'].mean(),2),'years')
+    print('The median career length of players who entered the NBA between 1995 and 2005 is', 
+    np.round(modern['career_length'].median(),2),'years')
+    retired = players[players['year_start'] <= 2005]
+    sns.set()
+    year_diff_mean = retired.groupby(by = 'year_start')['career_length'].mean()
+    year_diff_mean.plot(x = year_diff_mean.index, grid = 'on', xlabel = 'year', ylabel = 'avg career length', figsize = (8,6))
+
+ ![](images/chart3c.png) 
 
 
    
