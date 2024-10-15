@@ -7,6 +7,7 @@
   
 
  INTRODUCTION 
+ 
   -The dataset "NBA Players Stats since 1950" is sourced from Kaggle, a well-known platform for data science competitions and datasets. It contains detailed statistical data for NBA
     players, starting from the 1950s to recent seasons. The dataset includes various player performance metrics like points per game, assists, rebounds, shooting 
     percentages, and more. Its purpose is to provide analysts and researchers with a comprehensive view of player performances across different eras of NBA history, enabling 
@@ -68,39 +69,39 @@ BASIC ANALYSIS
 
                                 The goal is to observe changes in the players over the years from 1947 to 2018
 
-                      
+                     
 
 
-                                          import pandas as pd
-                                          import matplotlib.pyplot as plt
-                                          import numpy as np
-                                          import seaborn as sns
-                                          
-                                          # Load the data
-                                          file_path = '/content/player_data.csv'
-                                          df_nba = pd.read_csv(file_path)
-                                          
-                                          # Function to convert height from feet-inches format (e.g., 6-10) to inches
-                                          def height_to_inches(height):
-                                              if isinstance(height, str) and '-' in height:
-                                                  feet, inches = height.split('-')
-                                                  return int(feet) * 12 + int(inches)
-                                              return None
-                                          
-                                          # Apply the height conversion to the dataset
-                                          df_nba['height_inches'] = df_nba['height'].apply(height_to_inches)
-                                          
-                                          # Convert height from inches to centimeters
-                                          df_nba['height_cm'] = df_nba['height_inches'] * 2.54
-                                          
-                                          # Plot a histogram of player heights in centimeters
-                                          plt.figure(figsize=(8,6))
-                                          filtered_data = df_nba['height_cm'].dropna()
-                                          plt.hist(filtered_data, bins=15, edgecolor='black')
-                                          plt.title('Distribution of Player Heights (in cm)')
-                                          plt.xlabel('Height (cm)')
-                                          plt.ylabel('Number of Players')
-                                          plt.show()
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+
+# Load the data
+file_path = '/content/player_data.csv'
+df_nba = pd.read_csv(file_path)
+
+# Function to convert height from feet-inches format (e.g., 6-10) to inches
+def height_to_inches(height):
+    if isinstance(height, str) and '-' in height:
+        feet, inches = height.split('-')
+        return int(feet) * 12 + int(inches)
+    return None
+
+# Apply the height conversion to the dataset
+df_nba['height_inches'] = df_nba['height'].apply(height_to_inches)
+
+# Convert height from inches to centimeters
+df_nba['height_cm'] = df_nba['height_inches'] * 2.54
+
+# Plot a histogram of player heights in centimeters
+plt.figure(figsize=(8,6))
+filtered_data = df_nba['height_cm'].dropna()
+plt.hist(filtered_data, bins=15, edgecolor='black')
+plt.title('Distribution of Player Heights (in cm)')
+plt.xlabel('Height (cm)')
+plt.ylabel('Number of Players')
+plt.show()
 
  ![](images/chart3b.png)  
 
