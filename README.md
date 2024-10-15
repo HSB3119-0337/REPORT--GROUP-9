@@ -17,18 +17,14 @@
   PLAYER SET CREATION
                   (CODDE)
               Then we can make all of the columns that will be used for analysis
-       name: The name of the player.
-        name: The name of the player.
-        year_start: The starting year of the player's career or the year they began playing in the dataset.
-        year_end: The ending year of the player's career or the year they stopped playing in the dataset.
-        position: The positions that players typically occupy, with percentages indicating the proportion of players in each position
-        height: The height of players, categorized into ranges (e.g., 6-7, 6-8) with the percentage indicating how many players fall into each range.
-        6-7: 10%
-        6-8: 9%
-        Other: 80%
-        weight: The weight of players, possibly indicating distribution across different weight ranges.
-        birth_date: The birth dates of players, with a histogram showing how many players were born in specific years.
-        college: Indicates the colleges that players attended, with a percentage showing the proportion of players from a specific college (e.g., University of Kentucky: 7%).
+        1.name: The name of the player.
+        2.year_start: The starting year of the player's career or the year they began playing in the dataset.
+        3.year_end: The ending year of the player's career or the year they stopped playing in the dataset.
+        4.position: The positions that players typically occupy, with percentages indicating the proportion of players in each position
+        5.height: The height of players, categorized into ranges (e.g., 6-7, 6-8) with the percentage indicating how many players fall into each range.
+        6.weight: The weight of players, possibly indicating distribution across different weight ranges.
+        7.birth_date: The birth dates of players, with a histogram showing how many players were born in specific years.
+        8.college: Indicates the colleges that players attended, with a percentage showing the proportion of players from a specific college (e.g., University of Kentucky: 7%).
 
 
                   
