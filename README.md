@@ -14,19 +14,13 @@
     comparisons and trend analysis over time
 
                                   import pandas as pd
-                                
+                                  import pandas as pd
                                   import numpy as np
-                                  
                                   import matplotlib.pyplot as plt
-                                 
                                   import pandas
-                                 
                                   import statsmodels.api as sm
-                                 
                                   import seaborn as sns
-                                  
                                   # drive.mount('/content/drive')
-                                 
                                   players = pd.read_csv('../input/nba-players-stats/player_data.csv')
                                   
     PLAYER SET CREATION
@@ -62,6 +56,7 @@ HEIGHT ISSUES
    into the equivalent number of inches.
 
   Code: 
+                
                                 print(players['height'].head(4))
 
                                 for i in range(len(players['height'])):
@@ -81,19 +76,13 @@ BASIC ANALYSIS
 
 
                   import pandas as pd
-                  
                   import matplotlib.pyplot as plt
-                  
                   import numpy as np
-                  
                   import seaborn as sns
                   
                   # Load the data
-                  
                   file_path = '/content/player_data.csv'
-                  
                   df_nba = pd.read_csv(file_path)
-                  
                   
                   # Function to convert height from feet-inches format (e.g., 6-10) to inches
                   
@@ -240,6 +229,19 @@ Code:
  ![](images/chart3c.png) 
 
 
+FINAL THOUGHTS
+
+This dataset serves as a rich resource for sports analysts, researchers, and basketball enthusiasts. Its breadth and depth allow for deep
+
+dives into player performances and the changing dynamics of the NBA. By analyzing this data, one can uncover trends in playing styles, 
+
+individual achievements, and how the league has evolved over time. Whether for academic purposes or fan engagement, the dataset offers a 
+
+robust foundation for NBA-related insights.
+
+SOURCES
+ 
+     https://www.kaggle.com/drgilermo/nba-players-stats?select=player_data.csv
    
                   
                                                          
