@@ -12,15 +12,22 @@
     percentages, and more. Its purpose is to provide analysts and researchers with a comprehensive view of player performances across different eras of NBA history, enabling 
     comparisons and trend analysis over time
 
-                  (CODE)
-
-  PLAYER SET CREATION
-                
+                                  import pandas as pd
+                                  import numpy as np
+                                  import matplotlib.pyplot as plt
+                                  import pandas
+                                  import statsmodels.api as sm
+                                  import seaborn as sns
+                                  # drive.mount('/content/drive')
+                                  players = pd.read_csv('../input/nba-players-stats/player_data.csv')
+                                  
+    PLAYER SET CREATION
+                                                  
                   
                   players['career_length'] = players['year_end'] - players['year_start']
                   players.head(10)
                  
-                  (CODDE)
+                  
               
               Then we can make all of the columns that will be used for analysis
     
@@ -47,7 +54,9 @@ HEIGHT ISSUES
     ten inches. Since this makes calculations more difficult, I have written the following code to convert these values to the equivalent 
     numbers in inches.
 
-                                  (add code)
+                                print(players['height'].head(4))
+
+                                
 
                   
                                                          
