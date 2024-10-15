@@ -23,12 +23,15 @@
                                   # drive.mount('/content/drive')
                                   players = pd.read_csv('../input/nba-players-stats/player_data.csv')
                                   
-    PLAYER SET CREATION
-                                                  
-                  
-                  players['career_length'] = players['year_end'] - players['year_start']
-                 
-                  players.head(10)
+PLAYER SET CREATION
+ 
+ Code :                                                               
+                          
+                            players['career_length'] = players['year_end'] - players['year_start']
+                            players.head(10)
+
+  ![](images/table data palyer.png)                              
+                    
                 
 
     
