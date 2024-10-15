@@ -15,7 +15,11 @@
                   (CODE)
 
   PLAYER SET CREATION
+                
                   
+                  players['career_length'] = players['year_end'] - players['year_start']
+                  players.head(10)
+                 
                   (CODDE)
               
               Then we can make all of the columns that will be used for analysis
@@ -37,7 +41,13 @@
         
         college: Indicates the colleges that players attended, with a percentage showing the proportion of players from a specific college 
            
+HEIGHT ISSUES
 
+    In the data set, the height vector was set up in the format 'feet-inches' which means a height of 70 inches would read '6-10' as 6 feet 
+    ten inches. Since this makes calculations more difficult, I have written the following code to convert these values to the equivalent 
+    numbers in inches.
+
+                                  (add code)
 
                   
                                                          
