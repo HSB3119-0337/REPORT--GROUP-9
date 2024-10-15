@@ -14,18 +14,26 @@
     comparisons and trend analysis over time
 
                                   import pandas as pd
+                                
                                   import numpy as np
+                                  
                                   import matplotlib.pyplot as plt
+                                 
                                   import pandas
+                                 
                                   import statsmodels.api as sm
+                                 
                                   import seaborn as sns
+                                  
                                   # drive.mount('/content/drive')
+                                 
                                   players = pd.read_csv('../input/nba-players-stats/player_data.csv')
                                   
     PLAYER SET CREATION
                                                   
                   
                   players['career_length'] = players['year_end'] - players['year_start']
+                 
                   players.head(10)
                 
 
@@ -189,7 +197,14 @@ Code:
           # Display the plot
           plt.show()
 
- ![](images/chart3.png)  
+  ![](images/chart4.png)  
+
+ LONGEVITY 
+
+   Lastly let's attempt to get a sense of whether players who come into the NBA today are staying longer, or exiting quicker than those of  
+   
+  the 70s to 90s era. To do this however, we must omit players who are still playing, as they do not have a year_end date
+ 
  
 
 
