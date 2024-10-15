@@ -50,9 +50,9 @@
            
 HEIGHT ISSUES
 
-    In the data set, the height vector was set up in the format 'feet-inches' which means a height of 70 inches would read '6-10' as 6 feet 
-    ten inches. Since this makes calculations more difficult, I have written the following code to convert these values to the equivalent 
-    numbers in inches.
+   In the dataset, the height information is provided in the format 'feet-inches', where a height of 70 inches would be represented as '6-10', meaning 6 
+   feet 10 inches. Since this format can complicate calculations, I have written the following code to convert these values into the equivalent number of 
+   inches.
 
                                 print(players['height'].head(4))
 
