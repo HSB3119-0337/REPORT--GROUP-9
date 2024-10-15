@@ -67,7 +67,7 @@ BASIC ANALYSIS
  Code:
                                 height_p = players.groupby(by = 'year_start')['height'].mean()
 
-                                The goal is to observe changes in the players over the years from 1947 to 2018
+  The goal is to observe changes in the players over the years from 1947 to 2018
 
                      
 
@@ -125,7 +125,74 @@ BASIC ANALYSIS
 
  ![](images/chart3b.png)  
 
-                                
+ 
+ COMPARATIVE ANAYLYSIS
 
+Code:
+
+          import pandas as pd
+          import matplotlib.pyplot as plt
+          import numpy as np
+          import seaborn as sns
+          
+          # Load the data
+          file_path = '/content/player_data.csv'
+          df_nba = pd.read_csv(file_path)
+          
+          # Function to convert height from feet-inches format (e.g., 6-10) to inches
+          def height_to_inches(height):
+              if isinstance(height, str) and '-' in height:
+                  feet, inches = height.split('-')
+                  return int(feet) * 12 + int(inches)
+              return None
+          
+          # Apply the height conversion to the dataset
+          df_nba['height_inches'] = df_nba['height'].apply(height_to_inches)
+          
+          # Convert height from inches to centimeters
+          df_nba['height_cm'] = df_nba['height_inches'] * 2.54
+          
+          # Filter player positions
+          guards = df_nba[df_nba['position'] == 'G']
+          forwards = df_nba[df_nba['position'] == 'F']
+          centers = df_nba[df_nba['position'] == 'C']
+          
+          # Group by year and calculate mean height for each position group
+          height_G = guards.groupby('year_start')['height_cm'].mean()
+          height_F = forwards.groupby('year_start')['height_cm'].mean()
+          height_C = centers.groupby('year_start')['height_cm'].mean()
+          
+          # Define major ticks for x and y axes
+          major_ticks_y = np.arange(180, 240, 10)  # Adjusted for heights in centimeters
+          major_ticks_x = np.arange(1945, 2020, 10)
+          
+          # Plotting
+          sns.set()
+          fig, ax = plt.subplots(figsize=(15, 10))
+          
+          # Plot heights for Guards, Forwards, and Centers
+          height_G.plot(ax=ax, color='blue', label='Guards', marker='o')
+          height_F.plot(ax=ax, color='green', label='Forwards', marker='o')
+          height_C.plot(ax=ax, color='red', label='Centers', marker='o')
+          
+          # Set ticks and grid
+          ax.set_xticks(major_ticks_x)
+          ax.set_yticks(major_ticks_y)
+          ax.grid(which='major')
+          
+          # Set axis labels and legend
+          ax.set_xlabel('Year')
+          ax.set_ylabel('Height of Players (cm)')
+          ax.legend()
+          plt.title('Average Height by Position Over Time')
+          
+          # Display the plot
+          plt.show()
+
+ ![](images/chart3.png)  
+ 
+
+
+   
                   
                                                          
