@@ -34,7 +34,7 @@
         birth_date: The birth dates of players, with a histogram showing how many players were born in specific years.
         
         college: Indicates the colleges that players attended, with a percentage showing the proportion of players from a specific college 
-             (e.g., University of Kentucky: 7%).
+           
 
 
                   
