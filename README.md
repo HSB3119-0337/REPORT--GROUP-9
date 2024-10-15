@@ -3,5 +3,5 @@
 
                                     REPORT-GROUP 9 :TOPIC BASKETBALL 
 
-      ![](images/chart3b.png)                      
+  ![](images/nab3.jpg)                      
                                      
