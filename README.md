@@ -102,7 +102,7 @@ BASIC ANALYSIS
                                           plt.ylabel('Number of Players')
                                           plt.show()
 
-
+ ![](images/chart3b.png)  
 
                                 
 
