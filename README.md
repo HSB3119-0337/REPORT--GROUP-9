@@ -6,7 +6,7 @@
   ![](images/nab2.jpg)  
   
 
- INTRODUCTION 
+** INTRODUCTION **
  
   -The dataset "NBA Players Stats since 1950" is sourced from Kaggle, a well-known platform for data science competitions and datasets. It contains detailed statistical data for NBA
     players, starting from the 1950s to recent seasons. The dataset includes various player performance metrics like points per game, assists, rebounds, shooting 
@@ -23,7 +23,7 @@
                                   # drive.mount('/content/drive')
                                   players = pd.read_csv('../input/nba-players-stats/player_data.csv')
                                   
-PLAYER SET CREATION
+**PLAYER SET CREATION**
  
  Code :                                                               
                           
@@ -42,26 +42,26 @@ PLAYER SET CREATION
                 
 
     
-  name: The name of the player.
+  **-**name: The name of the player.
 
-  year_start: The starting year of the player's career or the year they began playing in the dataset.
+  **-**year_start: The starting year of the player's career or the year they began playing in the dataset.
   
-  year_end: The ending year of the player's career or the year they stopped playing in the dataset.
+  **-**year_end: The ending year of the player's career or the year they stopped playing in the dataset.
   
-  position: The positions that players typically occupy, with percentages indicating the proportion of players in each position:
+  **-**position: The positions that players typically occupy, with percentages indicating the proportion of players in each position:
   
-  height: The height of players, categorized into ranges (e.g., 6-7, 6-8) with the percentage indicating how many players fall into each 
+  **-**height: The height of players, categorized into ranges (e.g., 6-7, 6-8) with the percentage indicating how many players fall into each 
    range.
 
-  weight: The weight of players, possibly indicating distribution across different weight ranges.
+  **-**eight: The weight of players, possibly indicating distribution across different weight ranges.
   
-  birth_date: The birth dates of players, with a histogram showing how many players were born in specific years.
+  **-**birth_date: The birth dates of players, with a histogram showing how many players were born in specific years.
   
-  college: Indicates the colleges that players attended, with a percentage showing the proportion of players from a specific college (e.g., 
+  **-**college: Indicates the colleges that players attended, with a percentage showing the proportion of players from a specific college (e.g., 
     University of Kentucky: 7%).
 
            
-HEIGHT ISSUES
+**HEIGHT ISSUES**
 
    In the dataset, the height information is provided in the format 'feet-inches', where a height of 70 inches would be represented as '6- 
    10', meaning 6 feet 10 inches. Since this format can complicate calculations, I have written the following code to convert these values 
@@ -77,7 +77,7 @@ HEIGHT ISSUES
                                      players['height'][i] = 12 * float(c[0]) + float(c[1])
                                  players['height'].head(4)
 
-BASIC ANALYSIS
+**BASIC ANALYSIS**
 
  Code:
                                 height_p = players.groupby(by = 'year_start')['height'].mean()
@@ -133,9 +133,21 @@ BASIC ANALYSIS
                   plt.show()
 
  ![](images/chart3b.png)  
+Based on the chart showing the average career length of NBA players, we can make the following observations:
+**-**There is significant variability in the average career length of NBA players over time, ranging from around 2 years to nearly 7 years.
+
+**-**From the 1950s to the 1970s, there is a general declining trend in average career length, from over 4 years down to below 4 years.
+
+**-**From the 1970s to the 1990s, we see greater fluctuations, with clear peaks and valleys, as the average career length changes from around 3 years up to 
+ over 
+ 6 years.
+
+**-**In the 1990s and 2000s, the average career length appears to stabilize more, oscillating around the 5-6 year range.
+
+Overall, the chart reflects substantial changes in the average NBA player career length over time, with notable ups and downs.
 
  
- COMPARATIVE ANAYLYSIS
+** COMPARATIVE ANAYLYSIS**
 
 Code:
 
@@ -200,7 +212,7 @@ Code:
 
   ![](images/chart4.png)  
 
- LONGEVITY 
+** LONGEVITY **
    
    Lastly let's attempt to get a sense of whether players who come into the NBA today are staying longer, or exiting quicker than those of  
    
