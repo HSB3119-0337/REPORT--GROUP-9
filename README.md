@@ -241,7 +241,7 @@ Code:
  ![](images/chart3c.png) 
 
 
-FINAL THOUGHTS
+**FINAL THOUGHTS**
 
 This dataset serves as a rich resource for sports analysts, researchers, and basketball enthusiasts. Its breadth and depth allow for deep
 
