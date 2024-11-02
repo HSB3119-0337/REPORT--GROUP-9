@@ -134,8 +134,33 @@ The large difference in the number of online orders between states in India is a
 
   ![](images/nam1234.jpg) 
 
+Positive, Weak Relationship:
 
+The scatterplot (and regression line) show a positive connection between "Amount" and "Profit." The line slopes a bit upward. However, this connection is weak (as shown by the low R² value of 0.125). This means that only 12.5% of the changes in "Profit" can 
 
+be explained by variations in "Amount." Although the relationship exists, it’s not very strong
+
+Regression Line and Coefficients:
+
+The regression coefficient is roughly 0.1128: this shows that for every extra unit in "Amount," "Profit" goes up by a tiny amount (around 0.1128 units).
+
+The intercept is -8.2913 (which means) if the "Amount" were zero, the model predicts a small negative profit. However, this is mainly for interpretation rather than practical application. 
+
+Data Scatter and Variability:
+
+The scatterplot shows a wide spread of data points. This indicates a lot of variability in "Profit" for a certain "Amount." However, this dispersion demonstrates that the relationship between "Amount" and "Profit" isn't consistent. Although many points are 
+
+close (to the regression line), several deviate significantly. Because of this, it's clear that the connection isn't straightforward.
+
+The large shaded space (which surrounds the regression line) shows the confidence interval. This area highlights the uncertainty in the predictions made from this model. Although we have data, the range can vary because of different factors influencing the 
+
+results.
+
+Implication of Low R²:
+
+The low R² value (0.125) suggests that, although "Amount" has a slight positive effect on "Profit," it isn’t a reliable predictor. 
+
+This suggests that just raising the "Amount" may not always result in bigger profits , because "Profit" appears to be influenced by several factors, however, it isn't just about the "Amount" by itself.
 
 ###### 5.3.DISTRIBUTION OF CATEGORY
 
