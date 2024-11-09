@@ -147,9 +147,7 @@ This analysis contributes to businesses ability to understand their current perf
 - ### Positive, Weak Relationship:
  
   + The scatterplot (and regression line) show a positive connection between "Amount" and "Profit." The line slopes a bit upward. However, 
-  this connection is weak (as shown by the low
-  
-  + R² value of 0.125). This means that only 12.5% of the changes in "Profit" can be explained by variations in "Amount." Although the relationship exists, it’s not very strong
+  this connection is weak (as shown by the low R² value of 0.1189). This means that only 12.5% of the changes in "Profit" can be explained by variations in "Amount." Although the relationship exists, it’s not very strong
   
 - ### Regression Line, Coefficients:
  
@@ -170,7 +168,7 @@ This analysis contributes to businesses ability to understand their current perf
 
 - ### Low R²:
   
-  + The low R² value (0.125) suggests that, although "Amount" has a slight positive effect on "Profit," it isn’t a reliable predictor. 
+  + The low R² value (0.1189) suggests that, although "Amount" has a slight positive effect on "Profit," it isn’t a reliable predictor. 
 
   + This suggests that just raising the "Amount" may not always result in bigger profits , because "Profit" appears to be influenced by 
     several factors, however, it isn't just about the  "Amount" by itself.
